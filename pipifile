@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('test') {
+            steps {
+                echo 'Hello Surya World'
+            }
+        }
+        stage('dev'){
+            steps{
+                echo 'building'
+                build job: 'trial'
+            }
+        }
+    }
+}
